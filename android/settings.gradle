@@ -1,0 +1,3 @@
+rootProject.name = 'Signal2Mail'
+
+include ':app'

@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import React from 'react'
+import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
 
 const MessageListItem = ({ msg }) => (
   <TouchableOpacity activeOpacity={0.5}>
@@ -15,7 +15,7 @@ const MessageListItem = ({ msg }) => (
       </Text>
     </View>
   </TouchableOpacity>
-);
+)
 
 const styles = StyleSheet.create({
   listItem: {
@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
   body: {
     color: 'grey'
   }
-});
+})
 
-export default MessageListItem;
+export default MessageListItem

@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, ListView } from 'react-native';
-import MessageListItem from './MessageListItem';
+import React, { Component } from 'react'
+import { ListView } from 'react-native'
+import MessageListItem from './MessageListItem'
 
 class MessageList extends Component {
-  constructor(props) {
-    super(props);
-    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+  constructor (props) {
+    super(props)
+    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 })
     this.state = {
-      messagesDataSource: ds.cloneWithRows(props.messages)
-    };
+      msgDS: ds.cloneWithRows(props.messages)
+    }
   }
 
-  render() {
+  render () {
     return (
       <ListView
-        dataSource={this.state.messagesDataSource}
-        renderRow={ msg => <MessageListItem msg={msg} /> }>
-      </ListView>
-    );
+        dataSource={this.state.msgDS}
+        renderRow={msg => <MessageListItem msg={msg} />} />
+    )
   }
 }
 
-const styles = StyleSheet.create({
-});
-
-export default MessageList;
+export default MessageList

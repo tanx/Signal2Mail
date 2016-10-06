@@ -1,11 +1,11 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
 
 const ViewContainer = ({ children }) => (
   <View style={styles.viewContainer}>
     {children}
   </View>
-);
+)
 
 const styles = StyleSheet.create({
   viewContainer: {
@@ -14,6 +14,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'stretch'
   }
-});
+})
 
-export default ViewContainer;
+export default ViewContainer

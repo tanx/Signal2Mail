@@ -1,8 +1,8 @@
-import React from 'react';
-import { View } from 'react-native';
+import React from 'react'
+import { View } from 'react-native'
 
 const StatusBarBackground = ({ color }) => (
-  <View style={{ height:20, backgroundColor:color }} />
-);
+  <View style={{ height: 20, backgroundColor: color }} />
+)
 
-export default StatusBarBackground;
+export default StatusBarBackground

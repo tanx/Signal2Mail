@@ -23,7 +23,10 @@ class AppNavigator extends Component {
   _openComposeScreen () {
     this.refs.nav.push({
       component: ComposeScreen,
-      title: 'Compose'
+      title: 'Compose',
+      leftButtonTitle: 'Cancel',
+      onLeftButtonPress: () => this.refs.nav.pop(),
+      rightButtonTitle: 'Send'
     })
   }
 }

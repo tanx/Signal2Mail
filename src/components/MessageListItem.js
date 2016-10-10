@@ -12,7 +12,7 @@ const MessageListItem = ({ msg, openMessage }) => (
         {msg.subject}
       </Text>
       <Text style={styles.body}>
-        {msg.body && msg.body.length > 100 ? (msg.body.substr(0, 97) + '...') : msg.body}
+        {msg.body && msg.body.length > 100 ? (msg.body.substr(0, 93) + '...') : msg.body}
       </Text>
     </View>
   </TouchableHighlight>
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     paddingTop: 7,
     paddingBottom: 7,
     paddingRight: 15,
-    marginLeft: 15,
+    marginLeft: 25,
     borderBottomWidth: 0.5,
     borderColor: '#ddd'
   },
@@ -31,8 +31,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   subject: {
-    marginTop: 2,
-    marginBottom: 2
   },
   body: {
     color: 'grey'

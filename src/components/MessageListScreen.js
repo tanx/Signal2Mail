@@ -14,7 +14,6 @@ class MessageListScreen extends Component {
   _openMessageScreen (msg) {
     this.props.navigator.push({
       component: MessageScreen,
-      title: msg.from.map(i => i.name || i.address).join(', '),
       passProps: { msg }
     })
   }

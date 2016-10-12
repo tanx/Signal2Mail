@@ -1,40 +1,40 @@
 import React, { Component } from 'react'
-import { ScrollView, View, TextInput, StyleSheet } from 'react-native'
-import { Text } from 'native-base'
+import { ScrollView, View, Text, TextInput, StyleSheet } from 'react-native'
+import gStyles from '../styles/global'
 
 class ComposeScreen extends Component {
 
   render () {
     return (
       <ScrollView>
-        <View style={[styles.block, styles.input, styles.seperator]}>
-          <Text style={styles.label}>To:</Text>
+        <View style={[styles.input, gStyles.seperator]}>
+          <Text style={[gStyles.text, styles.label]}>To:</Text>
           <TextInput
-            style={styles.textField}
+            style={[gStyles.textInput, styles.textField]}
             autoFocus
             autoCorrect={false}
             autoCapitalize={'none'}
             keyboardType={'email-address'}
             onChangeText={to => this.setState({to})} />
         </View>
-        <View style={[styles.block, styles.input, styles.seperator]}>
-          <Text style={styles.label}>Cc:</Text>
+        <View style={[styles.input, gStyles.seperator]}>
+          <Text style={[gStyles.text, styles.label]}>Cc:</Text>
           <TextInput
-            style={styles.textField}
+            style={[gStyles.textInput, styles.textField]}
             autoCorrect={false}
             autoCapitalize={'none'}
             keyboardType={'email-address'}
             onChangeText={cc => this.setState({cc})} />
         </View>
-        <View style={[styles.block, styles.input, styles.seperator]}>
-          <Text style={styles.label}>Subject:</Text>
+        <View style={[styles.input, gStyles.seperator]}>
+          <Text style={[gStyles.text, styles.label]}>Subject:</Text>
           <TextInput
-            style={styles.textField}
+            style={[gStyles.textInput, styles.textField]}
             onChangeText={subject => this.setState({subject})} />
         </View>
-        <View style={styles.block}>
+        <View style={gStyles.block}>
           <TextInput
-            style={styles.body}
+            style={[gStyles.textInput, styles.body]}
             multiline
             onChangeText={body => this.setState({body})} />
         </View>
@@ -45,24 +45,17 @@ class ComposeScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-  block: {
-    paddingTop: 15,
-    paddingRight: 15,
-    paddingBottom: 15,
-    marginLeft: 15
-  },
   input: {
     flex: 1,
-    flexDirection: 'row'
-  },
-  seperator: {
-    borderBottomWidth: 0.5,
-    borderColor: '#ddd'
+    flexDirection: 'row',
+    marginLeft: 15,
+    alignItems: 'center'
   },
   label: {
-    marginRight: 3
+    marginRight: 4
   },
   textField: {
+    height: 55,
     flexGrow: 1
   },
   body: {

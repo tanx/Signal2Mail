@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import MessageList from './MessageList'
-import MessageScreen from './MessageScreen'
+import MessageScreen from '../message/MessageScreen'
 
-import data from '../dummy-data'
+import data from '../../dummy-data'
 
 class MessageListScreen extends Component {
   render () {

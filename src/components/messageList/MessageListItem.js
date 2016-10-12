@@ -1,17 +1,17 @@
 import React from 'react'
-import { StyleSheet, TouchableHighlight, View } from 'react-native'
-import { Text } from 'native-base'
+import { StyleSheet, TouchableHighlight, View, Text } from 'react-native'
+import gStyles from '../styles/global'
 
 const MessageListItem = ({ msg, openMessage }) => (
   <TouchableHighlight underlayColor={'#DADADA'} onPress={openMessage.bind(this, msg)}>
-    <View style={styles.listItem}>
-      <Text style={styles.from}>
+    <View style={[styles.listItem, gStyles.seperator]}>
+      <Text style={[gStyles.text, styles.from]}>
         {msg.from.map(i => i.name || i.address).join(', ')}
       </Text>
-      <Text style={styles.subject}>
+      <Text style={gStyles.text}>
         {msg.subject}
       </Text>
-      <Text style={styles.body}>
+      <Text style={[gStyles.text, styles.body]}>
         {msg.body && msg.body.length > 100 ? (msg.body.substr(0, 93) + '...') : msg.body}
       </Text>
     </View>
@@ -23,14 +23,10 @@ const styles = StyleSheet.create({
     paddingTop: 7,
     paddingBottom: 7,
     paddingRight: 15,
-    marginLeft: 25,
-    borderBottomWidth: 0.5,
-    borderColor: '#ddd'
+    marginLeft: 25
   },
   from: {
     fontWeight: 'bold'
-  },
-  subject: {
   },
   body: {
     color: 'grey'

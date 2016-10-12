@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavigatorIOS } from 'react-native'
-import MessageListScreen from './components/MessageListScreen'
-import ComposeScreen from './components/ComposeScreen'
+import MessageListScreen from './components/messageList/MessageListScreen'
+import ComposeScreen from './components/compose/ComposeScreen'
 
 class AppNavigator extends Component {
   render () {

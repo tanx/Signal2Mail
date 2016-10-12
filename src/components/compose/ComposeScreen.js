@@ -52,10 +52,11 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   label: {
-    marginRight: 4
+    color: 'grey',
+    marginRight: 5
   },
   textField: {
-    height: 55,
+    height: 50,
     flexGrow: 1
   },
   body: {

@@ -7,7 +7,7 @@ class ComposeScreen extends Component {
   render () {
     return (
       <ScrollView>
-        <Compose />
+        <Compose setState={this.setState.bind(this)} />
       </ScrollView>
     )
   }

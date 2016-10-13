@@ -15,7 +15,8 @@ class MessageList extends Component {
     return (
       <ListView
         dataSource={this.state.messagesDataSource}
-        renderRow={msg => <MessageListItem msg={msg} openMessage={this.props.openMessage} />} />
+        renderRow={msg => <MessageListItem msg={msg} openMessage={this.props.openMessage} />}
+      />
     )
   }
 }

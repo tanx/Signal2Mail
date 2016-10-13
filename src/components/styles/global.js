@@ -10,12 +10,6 @@ export default StyleSheet.create({
     lineHeight: 24,
     fontSize: 15
   },
-  block: {
-    paddingTop: 15,
-    paddingRight: 15,
-    paddingBottom: 15,
-    marginLeft: 15
-  },
   seperator: {
     borderBottomWidth: 0.5,
     borderColor: '#ddd'

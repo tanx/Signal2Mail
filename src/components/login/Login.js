@@ -1,16 +1,11 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import FormInput from '../widgets/FormInput'
-import gStyles from '../styles/global'
-import Form from '../widgets/Form'
-import H1 from '../widgets/H1'
-import Button from '../widgets/Button'
+import { Form, FormInput, H1, Text, Button, CenterColumn } from '../widgets'
 
 const Login = ({ setState, submit }) => (
-  <View style={styles.container}>
+  <CenterColumn>
     <Form>
       <H1>Sign up via email</H1>
-      <Text style={gStyles.text}>You'll receive a verification code</Text>
+      <Text>You'll receive a verification code</Text>
       <FormInput
         type='email'
         placeholder='Email address'
@@ -20,15 +15,7 @@ const Login = ({ setState, submit }) => (
       />
       <Button onPress={submit}>Sign up</Button>
     </Form>
-  </View>
+  </CenterColumn>
 )
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center'
-  }
-})
 
 export default Login

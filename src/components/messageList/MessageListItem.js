@@ -1,17 +1,18 @@
 import React from 'react'
-import { StyleSheet, TouchableHighlight, View, Text } from 'react-native'
+import { StyleSheet, TouchableHighlight, View } from 'react-native'
+import { Text } from '../widgets'
 import gStyles from '../styles/global'
 
 const MessageListItem = ({ msg, openMessage }) => (
   <TouchableHighlight underlayColor={'#DADADA'} onPress={openMessage.bind(this, msg)}>
     <View style={[styles.listItem, gStyles.seperator]}>
-      <Text style={[gStyles.text, styles.from]}>
+      <Text style={styles.from}>
         {msg.from.map(i => i.name || i.address).join(', ')}
       </Text>
-      <Text style={gStyles.text}>
+      <Text>
         {msg.subject}
       </Text>
-      <Text style={[gStyles.text, styles.body]}>
+      <Text style={styles.body}>
         {msg.body && msg.body.length > 100 ? (msg.body.substr(0, 93) + '...') : msg.body}
       </Text>
     </View>

@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row'
   },
   form: {
-    padding: 40,
-    flexGrow: 1
+    flexGrow: 1,
+    padding: 40
   }
 })
 

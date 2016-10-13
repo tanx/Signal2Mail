@@ -1,19 +1,19 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
-import gStyles from '../styles/global'
+import { View, StyleSheet } from 'react-native'
+import { Text, Block } from '../widgets'
 
 const Message = ({ msg }) => (
   <View>
-    <View style={[gStyles.block, gStyles.seperator]}>
-      <Text style={[gStyles.text, styles.from]}>{msg.from.map(i => i.name || i.address).join(', ')}</Text>
-      <Text style={gStyles.text}>To: {msg.to.map(i => i.name || i.address).join(', ')}</Text>
-    </View>
-    <View style={[gStyles.block, gStyles.seperator]}>
-      <Text style={[gStyles.text, styles.subject]}>{msg.subject}</Text>
-    </View>
-    <View style={gStyles.block}>
-      <Text style={gStyles.text}>{msg.body}</Text>
-    </View>
+    <Block seperator>
+      <Text style={styles.from}>{msg.from.map(i => i.name || i.address).join(', ')}</Text>
+      <Text>To: {msg.to.map(i => i.name || i.address).join(', ')}</Text>
+    </Block>
+    <Block seperator>
+      <Text style={styles.subject}>{msg.subject}</Text>
+    </Block>
+    <Block>
+      <Text>{msg.body}</Text>
+    </Block>
   </View>
 )
 

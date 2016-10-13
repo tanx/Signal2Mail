@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
+import { Navigator } from 'react-native'
 import { Container, Header, Title, Content, Button, Icon } from 'native-base'
-import MessageList from './components/MessageList'
-import data from './dummy-data'
+import MessageListScreen from './components/messageList/MessageListScreen'
 
 class App extends Component {
   render () {
@@ -18,7 +18,7 @@ class App extends Component {
         </Header>
 
         <Content>
-          <MessageList messages={data.messages} />
+          <MessageListScreen openMessage={() => {}} />
         </Content>
       </Container>
     )

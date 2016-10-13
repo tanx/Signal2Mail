@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, StyleSheet } from 'react-native'
 import gStyles from '../styles/global'
 
-const Form = ({ children }) => (
+const H1 = ({ children }) => (
   <Text style={[gStyles.text, styles.h1]}>
     {children}
   </Text>
@@ -16,4 +16,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Form
+export default H1

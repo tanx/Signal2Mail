@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, TextInput, StyleSheet } from 'react-native'
-import MessageFormInput from '../widgets/MessageFormInput'
+import { MessageFormInput, Block } from '../widgets'
 import gStyles from '../styles/global'
 
 const Compose = ({ setState }) => (
@@ -8,12 +8,12 @@ const Compose = ({ setState }) => (
     <MessageFormInput label='To' type='email' onChangeText={to => setState({to})} autoFocus />
     <MessageFormInput label='Cc' type='email' onChangeText={cc => setState({cc})} />
     <MessageFormInput label='Subject' onChangeText={subject => setState({subject})} />
-    <View style={gStyles.block}>
+    <Block>
       <TextInput
         style={[gStyles.textInput, styles.body]}
         onChangeText={body => setState({body})}
         multiline />
-    </View>
+    </Block>
   </View>
 )
 

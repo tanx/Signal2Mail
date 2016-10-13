@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, TouchableHighlight, View } from 'react-native'
 import { Text } from '../widgets'
-import gStyles from '../styles/global'
+import gStyles, { baseLineHeight } from '../styles/global'
 
 const MessageListItem = ({ msg, openMessage }) => (
   <TouchableHighlight underlayColor={'#DADADA'} onPress={openMessage.bind(this, msg)}>
@@ -13,7 +13,7 @@ const MessageListItem = ({ msg, openMessage }) => (
         {msg.subject}
       </Text>
       <Text style={styles.body}>
-        {msg.body && msg.body.length > 100 ? (msg.body.substr(0, 93) + '...') : msg.body}
+        {msg.body && msg.body.substr(0, 100)}
       </Text>
     </View>
   </TouchableHighlight>
@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   body: {
+    height: 2 * baseLineHeight,
     color: 'grey'
   }
 })

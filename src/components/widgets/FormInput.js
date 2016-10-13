@@ -1,19 +1,15 @@
 import React from 'react'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
+import { TextInput, StyleSheet } from 'react-native'
+import EmailInput from './EmailInput'
 import gStyles from '../styles/global'
 
 const FormInput = props => (
-  <View style={[styles.input, gStyles.seperator]}>
-    <Text style={[gStyles.text, styles.label]}>{props.label}:</Text>
-    {props.type === 'email' ? <EmailIn {...props} /> : <TextIn {...props} />}
-  </View>
+  props.type === 'email' ? <EmailIn {...props} /> : <TextIn {...props} />
 )
 
 const EmailIn = props => (
-  <TextIn
-    autoCorrect={false}
-    autoCapitalize={'none'}
-    keyboardType={'email-address'}
+  <EmailInput
+    style={styles.textField}
     {...props}
   />
 )
@@ -26,19 +22,12 @@ const TextIn = props => (
 )
 
 const styles = StyleSheet.create({
-  input: {
-    flex: 1,
-    flexDirection: 'row',
-    marginLeft: 15,
-    alignItems: 'center'
-  },
-  label: {
-    color: 'grey',
-    marginRight: 5
-  },
   textField: {
+    marginTop: 10,
     height: 50,
-    flexGrow: 1
+    paddingLeft: 15,
+    borderWidth: 1,
+    borderColor: 'lightgrey'
   }
 })
 

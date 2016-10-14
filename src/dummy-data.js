@@ -7,7 +7,7 @@ const message = {
   body
 }
 
-const messages = new Array(50)
+const messages = new Array(10)
 for (let i = 0; i < messages.length; i++) messages[i] = message
 
 export default {

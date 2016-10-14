@@ -38,6 +38,7 @@ class AppNavigator extends Component {
       component: MessageListScreen,
       title: 'Messages',
       leftButtonTitle: 'Edit',
+      onLeftButtonPress: () => this.refs.nav.pop(),
       rightButtonSystemIcon: 'compose',
       onRightButtonPress: this._showComposeScreen.bind(this),
       passProps: { openMessage: this._showMessageScreen.bind(this) }

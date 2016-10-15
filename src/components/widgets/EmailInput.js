@@ -8,6 +8,7 @@ const EmailInput = props => (
     autoCorrect={false}
     autoCapitalize={'none'}
     keyboardType={'email-address'}
+    underlineColorAndroid='rgba(0,0,0,0)'
     {...props}
   />
 )

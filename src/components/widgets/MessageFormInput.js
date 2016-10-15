@@ -20,6 +20,7 @@ const EmailIn = props => (
 const TextIn = props => (
   <TextInput
     style={[gStyles.textInput, styles.textField]}
+    underlineColorAndroid='rgba(0,0,0,0)'
     {...props}
   />
 )

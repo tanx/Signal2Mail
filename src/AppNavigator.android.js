@@ -30,6 +30,7 @@ class AppNavigator extends Component {
           this._navigator = navigator
           return this._renderScene()
         }}
+        configureScene={(route, routeStack) => route.animation ? route.animation : Navigator.SceneConfigs.PushFromRight}
       />
     )
   }
@@ -96,7 +97,8 @@ class AppNavigator extends Component {
       leftButtonTitle: 'Cancel',
       onLeftButtonPress: () => this._onBack(),
       rightButtonTitle: 'Send',
-      onRightButtonPress: () => this._onBack()
+      onRightButtonPress: () => this._onBack(),
+      animation: Navigator.SceneConfigs.FloatFromBottom
     })
   }
 

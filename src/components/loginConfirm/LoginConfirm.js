@@ -11,7 +11,6 @@ const LoginConfirm = ({ setState, submit }) => (
         keyboardType={'numeric'}
         onChangeText={code => setState({code})}
         onSubmitEditing={submit}
-        autoFocus
       />
       <Button onPress={submit}>Confirm</Button>
     </Form>

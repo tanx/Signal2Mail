@@ -11,7 +11,6 @@ const Login = ({ setState, submit }) => (
         placeholder='Email address'
         onChangeText={email => setState({email})}
         onSubmitEditing={submit}
-        autoFocus
       />
       <Button onPress={submit}>Sign up</Button>
     </Form>
